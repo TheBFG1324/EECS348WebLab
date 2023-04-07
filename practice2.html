@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2</title>
+    <style>
+        #paragraph {
+            border-style: solid;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function changeStyle() {
+            var colorInput = document.getElementById("color");
+            var borderColorInput = document.getElementById("border-color");
+            var borderWidthInput = document.getElementById("border-width");
+
+            var color = colorInput.value || "black";
+            var borderColor = borderColorInput.value || "black";
+            var borderWidth = parseInt(borderWidthInput.value) || 0;
+
+            var p = document.getElementById("paragraph");
+            p.style.color = color;
+            p.style.borderColor = borderColor;
+            p.style.borderWidth = borderWidth + "px";
+        }
+    </script>
+</head>
+<body>
+    <label for="color">Color:</label>
+    <input type="text" id="color" placeholder="Enter a color"><br><br>
+
+    <label for="border-color">Border Color:</label>
+    <input type="text" id="border-color" placeholder="Enter a border color"><br><br>
+
+    <label for="border-width">Border Width:</label>
+    <input type="text" id="border-width" placeholder="Enter a border width"><br><br>
+
+    <button onclick="changeStyle()">Change Style</button>
+
+    <div id="paragraph">
+        <p>
+            I just wanna tell you how I'm feeling<br>
+            Gotta make you understand
+        </p>
+        <p>
+            Never gonna give you up<br>
+            Never gonna let you down<br>
+            Never gonna run around and desert you<br>
+            Never gonna make you cry<br>
+            Never gonna say goodbye<br>
+            Never gonna tell a lie and hurt you
+        </p>
+        <p>
+            We've known each other for so long<br>
+            Your heart's been aching, but you're too shy to say it<br>
+            Inside, we both know what's been going on<br>
+            We know the game, and we're gonna play it
+        </p>
+        <p>
+            And if you ask me how I'm feeling<br>
+            Don't tell me you're too blind to see
+        </p>
+    </div>
+</body>
+</html>
